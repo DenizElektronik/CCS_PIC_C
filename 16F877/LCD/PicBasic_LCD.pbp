@@ -1,0 +1,28 @@
+@ DEVICE pic16F877A, XT_OSC
+@ DEVICE pic16F877A, BOD_ON
+@ DEVICE pic16F877A, LVP_OFF
+@ DEVICE pic16F877A, PWRT_ON  
+@ DEVICE pic16F877A, WRT_OFF
+
+DEFINE OSC 4    
+ 
+'------------------------------------ 
+' dELAb PIC Dev Tool LCD Baðlantý Kurulumu: 
+'------------------------------------ 
+DEFINE LCD_DREG PORTB   'LCD data bacaklarý PortB de baðlý 
+DEFINE LCD_DBIT 4       'LCD data bacaklarý 4. bitten baþlýyor 
+DEFINE LCD_EREG PORTB   'LCD Enable Bacaðý PortB de baðlý 
+DEFINE LCD_EBIT 3       'LCD Enable Bacaðý 3. bite baðlý 
+DEFINE LCD_RSREG PORTB  'LCD RS Bacaðý PortB de baðlý 
+DEFINE LCD_RSBIT 2      'LCD RS bacaðý 2. Bite baðlý 
+DEFINE LCD_BITS 4       'LCD 4 bit olarak baðlý 
+DEFINE LCD_LINES 2      'LCD 2 sýra olarak çalýþýyor. 
+
+
+PAUSE 300 ' 300 ms LCD Gecikmesi 
+
+LCDOUT $FE,1,"PIC BASIC PRO" 
+LCDOUT $FE,$C2,"LCD DENEME" 
+
+END
+
